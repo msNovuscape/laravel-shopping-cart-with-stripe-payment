@@ -19,6 +19,12 @@ class ProductController extends Controller
         $products = Product::all();
         return view('shop.index',['products' => $products]);
     }
+    public function getProducts(){
+        return view('shop.products');
+    }
+    public function getProduct(){
+        return view('shop.product');
+    }
 
     public function addToCart(Request $request)
     {

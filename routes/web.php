@@ -18,6 +18,16 @@ Route::get('/', [
     'as' => 'product.index'
 ]);
 
+Route::get('/getProducts', [
+    'uses' => 'ProductController@getProducts',
+    'as' => 'product.getProducts'
+]);
+
+Route::get('/getProduct', [
+    'uses' => 'ProductController@getProduct',
+    'as' => 'product.getProduct'
+]);
+
 Route::get('/add-to-cart/', [
     'uses' => 'ProductController@addToCart',
     'as' => 'product.addToCart'
